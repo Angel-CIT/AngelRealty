@@ -1,76 +1,104 @@
-// Nav scroll effect
+/* ============================================================
+   Angel Barba Realty — script.js
+   ============================================================ */
+
+// ── Nav: fondo sólido al hacer scroll ──────────────────────
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-});
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 48);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// Mobile menu
-const burger = document.getElementById('burger');
+// ── Menú móvil ─────────────────────────────────────────────
+const burger     = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobileMenu');
+
 burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+  const isOpen = mobileMenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', isOpen);
+  mobileMenu.setAttribute('aria-hidden', !isOpen);
 });
 
-// Close mobile menu on link click
+// Cerrar al hacer clic en un enlace
 mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  });
 });
 
-// Smooth scroll for anchor links
+// ── Scroll suave para anclas ────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
     const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top, behavior: 'smooth' });
   });
 });
 
-// Contact form → WhatsApp redirect
-document.getElementById('contactForm').addEventListener('submit', e => {
+// ── Formulario de estimación → WhatsApp ────────────────────
+const PHONE = '526647548143';
+
+const tipoMap = {
+  venta:  'conocer el precio de venta de mi propiedad',
+  renta:  'saber a cuánto puedo rentar mi propiedad',
+  ambos:  'conocer tanto el precio de venta como de renta de mi propiedad'
+};
+
+document.getElementById('estimacionForm').addEventListener('submit', e => {
   e.preventDefault();
-  const nombre = document.getElementById('nombre').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const interes = document.getElementById('interes').value;
-  const mensaje = document.getElementById('mensaje').value.trim();
+  const nombre    = document.getElementById('est-nombre').value.trim();
+  const telefono  = document.getElementById('est-telefono').value.trim();
+  const tipo      = document.getElementById('est-tipo').value;
+  const propiedad = document.getElementById('est-propiedad').value.trim();
 
-  const interesMap = {
-    administracion: 'administrar mi propiedad en renta',
-    venta: 'vender mi propiedad',
-    compra: 'comprar una propiedad',
-    otro: 'otro tema'
-  };
+  let msg = `Hola Angel, soy ${nombre || 'un visitante de tu página'} y me gustaría solicitar una estimación de precio gratuita.`;
+  if (tipo)      msg += ` Me interesa ${tipoMap[tipo] || tipo}.`;
+  if (propiedad) msg += ` Aquí te cuento sobre mi propiedad: ${propiedad}`;
+  if (telefono)  msg += ` Mi número es ${telefono}.`;
 
-  let text = `Hola Angel, soy ${nombre || 'un visitante de tu página'}.`;
-  if (interes) text += ` Me interesa ${interesMap[interes] || interes}.`;
-  if (telefono) text += ` Mi teléfono es ${telefono}.`;
-  if (mensaje) text += ` ${mensaje}`;
-
-  const phone = '526647548143';
-  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
+  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
 });
 
-// Animate elements on scroll
+// ── Formulario de contacto → WhatsApp ──────────────────────
+const interesMap = {
+  administracion: 'administrar mi propiedad en renta',
+  venta:          'vender mi propiedad',
+  estimacion:     'solicitar una estimación de precio gratuita',
+  otro:           'otro tema'
+};
+
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const nombre   = document.getElementById('c-nombre').value.trim();
+  const telefono = document.getElementById('c-telefono').value.trim();
+  const interes  = document.getElementById('c-interes').value;
+  const mensaje  = document.getElementById('c-mensaje').value.trim();
+
+  let msg = `Hola Angel, soy ${nombre || 'un visitante de tu página'}.`;
+  if (interes)   msg += ` Me interesa ${interesMap[interes] || interes}.`;
+  if (mensaje)   msg += ` ${mensaje}`;
+  if (telefono)  msg += ` Puedes contactarme al ${telefono}.`;
+
+  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+// ── Animaciones de entrada con IntersectionObserver ────────
+const revealTargets = document.querySelectorAll(
+  '.svc-card, .dif-card, .blog-card, .sobre-mi__copy, .estimacion__copy, .estimacion__form, .contacto__copy, .contacto__form'
+);
+
+revealTargets.forEach(el => el.classList.add('js-reveal'));
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
-const animateTargets = document.querySelectorAll(
-  '.servicio-card, .diferencia__card, .cliente-card, .stat'
-);
-
-animateTargets.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
+revealTargets.forEach(el => observer.observe(el));
