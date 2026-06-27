@@ -1,104 +1,72 @@
-/* ============================================================
-   Angel Barba Realty — script.js
-   ============================================================ */
+/* ================================================================
+   ANGEL BARBA REALTY — script.js
+   ================================================================ */
 
-// ── Nav: fondo sólido al hacer scroll ──────────────────────
+// ── Nav scroll ──────────────────────────────────────────────
 const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 48);
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+const handleScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', handleScroll, { passive: true });
+handleScroll();
 
-// ── Menú móvil ─────────────────────────────────────────────
-const burger     = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
+// ── Menú móvil ───────────────────────────────────────────────
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
 
 burger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  burger.setAttribute('aria-expanded', isOpen);
-  mobileMenu.setAttribute('aria-hidden', !isOpen);
+  const open = drawer.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
 });
-
-// Cerrar al hacer clic en un enlace
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
+drawer.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    drawer.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-  });
-});
-
-// ── Scroll suave para anclas ────────────────────────────────
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (!target) return;
-    e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: 'smooth' });
-  });
-});
-
-// ── Formulario de estimación → WhatsApp ────────────────────
-const PHONE = '526647548143';
-
-const tipoMap = {
-  venta:  'conocer el precio de venta de mi propiedad',
-  renta:  'saber a cuánto puedo rentar mi propiedad',
-  ambos:  'conocer tanto el precio de venta como de renta de mi propiedad'
-};
-
-document.getElementById('estimacionForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const nombre    = document.getElementById('est-nombre').value.trim();
-  const telefono  = document.getElementById('est-telefono').value.trim();
-  const tipo      = document.getElementById('est-tipo').value;
-  const propiedad = document.getElementById('est-propiedad').value.trim();
-
-  let msg = `Hola Angel, soy ${nombre || 'un visitante de tu página'} y me gustaría solicitar una estimación de precio gratuita.`;
-  if (tipo)      msg += ` Me interesa ${tipoMap[tipo] || tipo}.`;
-  if (propiedad) msg += ` Aquí te cuento sobre mi propiedad: ${propiedad}`;
-  if (telefono)  msg += ` Mi número es ${telefono}.`;
-
-  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
-});
-
-// ── Formulario de contacto → WhatsApp ──────────────────────
-const interesMap = {
-  administracion: 'administrar mi propiedad en renta',
-  venta:          'vender mi propiedad',
-  estimacion:     'solicitar una estimación de precio gratuita',
-  otro:           'otro tema'
-};
-
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const nombre   = document.getElementById('c-nombre').value.trim();
-  const telefono = document.getElementById('c-telefono').value.trim();
-  const interes  = document.getElementById('c-interes').value;
-  const mensaje  = document.getElementById('c-mensaje').value.trim();
-
-  let msg = `Hola Angel, soy ${nombre || 'un visitante de tu página'}.`;
-  if (interes)   msg += ` Me interesa ${interesMap[interes] || interes}.`;
-  if (mensaje)   msg += ` ${mensaje}`;
-  if (telefono)  msg += ` Puedes contactarme al ${telefono}.`;
-
-  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
-});
-
-// ── Animaciones de entrada con IntersectionObserver ────────
-const revealTargets = document.querySelectorAll(
-  '.svc-card, .dif-card, .blog-card, .sobre-mi__copy, .estimacion__copy, .estimacion__form, .contacto__copy, .contacto__form'
+  })
 );
 
-revealTargets.forEach(el => el.classList.add('js-reveal'));
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+// ── Scroll suave ─────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
   });
-}, { threshold: 0.12 });
+});
 
-revealTargets.forEach(el => observer.observe(el));
+// ── Animaciones de entrada ────────────────────────────────────
+const revealObserver = new IntersectionObserver(
+  entries => entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-visible');
+      revealObserver.unobserve(e.target);
+    }
+  }),
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+// ── WhatsApp helpers ──────────────────────────────────────────
+const PHONE = '526647548143';
+const wa = text => `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
+
+// ── Formulario de valuación ────────────────────────────────────
+document.getElementById('valuationForm')?.addEventListener('submit', e => {
+  e.preventDefault();
+  const nombre  = document.getElementById('v-nombre')?.value.trim();
+  const wa_num  = document.getElementById('v-whatsapp')?.value.trim();
+  const tipo    = document.getElementById('v-tipo')?.value;
+  const detalle = document.getElementById('v-detalle')?.value.trim();
+
+  const tipoMap = {
+    renta:  'saber a cuánto puedo rentar mi propiedad',
+    venta:  'conocer el precio de venta de mi propiedad',
+    ambos:  'conocer tanto el precio de renta como de venta',
+  };
+
+  let msg = `Hola Angel, soy ${nombre || 'un visitante de tu página'} y quisiera solicitar una valuación gratuita.`;
+  if (tipo)    msg += ` Me interesa ${tipoMap[tipo] || tipo}.`;
+  if (detalle) msg += ` Sobre mi propiedad: ${detalle}`;
+  if (wa_num)  msg += ` Mi número es ${wa_num}.`;
+
+  window.open(wa(msg), '_blank');
+});

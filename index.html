@@ -3,539 +3,532 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Angel Barba — Tu Asesor de Confianza | Bienes Raíces Tijuana</title>
-  <meta name="description" content="Asesor inmobiliario en Tijuana especializado en administración de propiedades en renta y venta. Honesto, cercano y profesional. Solicita tu estimación de precio gratis." />
-  <meta property="og:title" content="Angel Barba — Tu Asesor de Confianza | Tijuana" />
-  <meta property="og:description" content="Administración de rentas y venta de propiedades en Tijuana. Solicita tu estimación de precio gratis." />
-  <meta property="og:image" content="Mi Foto.jpg" />
-  <meta property="og:type" content="website" />
+  <title>Angel Barba — Asesor Inmobiliario en Tijuana</title>
+  <meta name="description" content="Administración de propiedades en renta y venta en Tijuana. Atención directa, contratos que protegen tu patrimonio y gestión sin complicaciones." />
+  <meta property="og:title"       content="Angel Barba — Asesor Inmobiliario en Tijuana" />
+  <meta property="og:description" content="Administración de propiedades en renta y venta en Tijuana. Solicita tu valuación gratuita." />
+  <meta property="og:image"       content="Mi Foto.jpg" />
+  <meta property="og:type"        content="website" />
+  <meta name="theme-color"        content="#0a2e35" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- =========================================================
-       NAVEGACIÓN
-  ========================================================= -->
+  <!-- ╔══════════════════════════════════════════╗
+       ║  NAVEGACIÓN                              ║
+       ╚══════════════════════════════════════════╝ -->
   <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#inicio" class="nav__logo">
-        <img src="Logo 1.png" alt="Angel Barba — Asesor Inmobiliario" />
+    <div class="nav-wrap">
+      <a href="#inicio" class="nav-logo" aria-label="Angel Barba — inicio">
+        <img src="Logo 1.png" alt="Angel Barba" />
       </a>
-      <nav class="nav__menu" aria-label="Menú principal">
-        <ul class="nav__links">
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#diferencia">Por qué yo</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#sobre-mi">Quién soy</a></li>
           <li><a href="#blog">Artículos</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
         </ul>
       </nav>
-      <a href="#estimacion" class="btn btn--nav">Estimación gratis</a>
-      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <a href="#valuacion" class="nav-cta">Valuación gratuita</a>
+      <button class="nav-burger" id="burger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span>
       </button>
     </div>
-    <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
+    <div class="nav-drawer" id="drawer">
       <ul>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#diferencia">Por qué yo</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#sobre-mi">Quién soy</a></li>
         <li><a href="#blog">Artículos</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#estimacion" class="mobile-cta">Estimación gratis</a></li>
+        <li><a href="#valuacion">Valuación gratuita</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- =========================================================
-       HERO
-  ========================================================= -->
-  <section class="hero" id="inicio">
-    <div class="hero__backdrop"></div>
-    <div class="hero__grid">
+  <!-- ╔══════════════════════════════════════════╗
+       ║  HERO                                    ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-lines" aria-hidden="true"></div>
+    </div>
 
-      <div class="hero__copy">
-        <div class="hero__eyebrow">
-          <span class="dot"></span>
+    <div class="hero-content">
+      <div class="hero-left">
+        <p class="hero-location">
+          <span class="location-dot"></span>
           Tijuana, Baja California
-        </div>
-        <h1 class="hero__headline">
-          Tu patrimonio,<br />
-          <em>en las mejores<br />manos.</em>
-        </h1>
-        <p class="hero__body">
-          Soy Angel Barba, asesor inmobiliario en Tijuana. Me especializo en administración de propiedades en renta y venta. Trabajo contigo de manera directa, honesta y cercana — sin intermediarios, sin promesas vacías.
         </p>
-        <div class="hero__actions">
-          <a href="#estimacion" class="btn btn--lima">
-            Solicitar estimación gratis
+
+        <h1 class="hero-headline">
+          Propiedades<br />
+          bien gestionadas.<br />
+          <em>Patrimonio protegido.</em>
+        </h1>
+
+        <p class="hero-sub">
+          Soy Angel Barba. Trabajo con propietarios que quieren que sus bienes raíces funcionen — sin dolores de cabeza, sin sorpresas, sin intermediarios innecesarios.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#valuacion" class="btn-primary">
+            Solicitar valuación gratuita
           </a>
-          <a href="https://wa.me/526647548143?text=Hola%20Angel%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20tus%20servicios." class="btn btn--ghost" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribir por WhatsApp
+          <a href="https://wa.me/526647548143?text=Hola%20Angel%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s." class="btn-text" target="_blank" rel="noopener">
+            <span>Escribir por WhatsApp</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
-        <div class="hero__trust">
-          <div class="trust-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Contratos que protegen tu patrimonio
+
+        <div class="hero-proof">
+          <div class="proof-item">
+            <strong>Renta</strong>
+            <span>Administración sin fricciones</span>
           </div>
-          <div class="trust-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Respuesta rápida, siempre
+          <div class="proof-divider" aria-hidden="true"></div>
+          <div class="proof-item">
+            <strong>Venta</strong>
+            <span>Al precio justo, en el menor tiempo</span>
           </div>
-          <div class="trust-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Sin letra chica, sin sorpresas
+          <div class="proof-divider" aria-hidden="true"></div>
+          <div class="proof-item">
+            <strong>Tijuana</strong>
+            <span>Mercado local, atención personal</span>
           </div>
         </div>
       </div>
 
-      <div class="hero__visual">
-        <div class="hero__photo-wrap">
-          <img src="Mi Foto.jpg" alt="Angel Barba, asesor inmobiliario en Tijuana" />
-          <div class="hero__tag-float">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <div>
-              <strong>Tu Asesor de Confianza</strong>
-              <span>Tijuana, BC</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero__deco-circle"></div>
-      </div>
-
-    </div>
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       ESTIMACIÓN GRATIS — LEAD MAGNET
-  ========================================================= -->
-  <section class="estimacion" id="estimacion">
-    <div class="estimacion__inner">
-      <div class="estimacion__copy">
-        <span class="chip chip--lima">100 % gratuito</span>
-        <h2>¿Cuánto vale tu propiedad?</h2>
-        <p>Muchos propietarios pierden dinero por no conocer el valor real de su inmueble. Te doy una <strong>estimación de precio sin costo</strong> — ya sea para venderla o para ponerla en renta — basada en el mercado actual de Tijuana.</p>
-        <ul class="estimacion__beneficios">
-          <li>
-            <span class="check-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            Sin compromiso de contratación
-          </li>
-          <li>
-            <span class="check-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            Basada en el mercado real de Tijuana
-          </li>
-          <li>
-            <span class="check-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            Respuesta en menos de 24 horas
-          </li>
-        </ul>
-      </div>
-      <form class="estimacion__form" id="estimacionForm" novalidate>
-        <h3>Solicita tu estimación</h3>
-        <div class="form-row">
-          <div class="form-field">
-            <label for="est-nombre">Nombre</label>
-            <input type="text" id="est-nombre" name="nombre" placeholder="Tu nombre completo" required />
-          </div>
-          <div class="form-field">
-            <label for="est-telefono">WhatsApp</label>
-            <input type="tel" id="est-telefono" name="telefono" placeholder="+52 664 000 0000" required />
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="est-tipo">¿Qué quieres saber?</label>
-          <select id="est-tipo" name="tipo" required>
-            <option value="" disabled selected>Selecciona una opción</option>
-            <option value="venta">Precio de venta de mi propiedad</option>
-            <option value="renta">Precio de renta de mi propiedad</option>
-            <option value="ambos">Ambos (venta y renta)</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="est-propiedad">Cuéntame sobre tu propiedad</label>
-          <textarea id="est-propiedad" name="propiedad" rows="3" placeholder="Colonia, número de cuartos, metros, estado actual…"></textarea>
-        </div>
-        <button type="submit" class="btn btn--lima btn--full">
-          Quiero mi estimación gratis
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
-        <p class="form-note">Al enviar, se abrirá WhatsApp con tu solicitud lista.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       SERVICIOS
-  ========================================================= -->
-  <section class="servicios" id="servicios">
-    <div class="container">
-      <div class="section-header">
-        <span class="chip">Lo que hago</span>
-        <h2 class="section-title">Dos servicios, un solo objetivo:<br /><em>que tu propiedad trabaje para ti</em></h2>
-      </div>
-      <div class="servicios__grid">
-
-        <article class="svc-card svc-card--dark">
-          <div class="svc-card__label">Servicio estrella</div>
-          <div class="svc-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          </div>
-          <h3>Administración de Propiedades en Renta</h3>
-          <p>¿Ya no quieres lidiar con inquilinos, cobros tardíos o llamadas de emergencia? Yo me encargo de todo. Tú recibes tu dinero — y tranquilidad.</p>
-          <ul class="svc-card__list">
-            <li>Cobro puntual con rendición de cuentas mensual</li>
-            <li>Selección rigurosa de inquilinos</li>
-            <li>Contratos legalmente sólidos</li>
-            <li>Red de proveedores para mantenimiento y reparaciones</li>
-            <li>Gestión a distancia (ideal si vives en San Diego o fuera de Tijuana)</li>
-          </ul>
-          <a href="#estimacion" class="btn btn--lima">Solicitar estimación de renta gratis</a>
-        </article>
-
-        <article class="svc-card svc-card--light">
-          <div class="svc-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3>Venta de Propiedades</h3>
-          <p>Vendo tu propiedad al precio correcto, con el proceso legal claro y sin sorpresas. Te acompaño de principio a fin para que cierres con seguridad.</p>
-          <ul class="svc-card__list">
-            <li>Valuación honesta basada en el mercado real</li>
-            <li>Estrategia de precio para vender en el menor tiempo posible</li>
-            <li>Difusión profesional de la propiedad</li>
-            <li>Acompañamiento legal completo hasta el cierre</li>
-            <li>Proceso transparente, sin letra chica</li>
-          </ul>
-          <a href="#estimacion" class="btn btn--dark">Solicitar estimación de venta gratis</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       POR QUÉ YO
-  ========================================================= -->
-  <section class="diferencia" id="diferencia">
-    <div class="container">
-      <div class="section-header section-header--light">
-        <span class="chip chip--light">Por qué elegirme</span>
-        <h2 class="section-title section-title--light">Lo que me distingue</h2>
-        <p class="section-desc section-desc--light">No todos los asesores trabajan igual. Aquí es donde está la diferencia.</p>
-      </div>
-      <div class="diferencia__grid">
-
-        <div class="dif-card" data-delay="0">
-          <div class="dif-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          </div>
-          <h4>Honestidad total</h4>
-          <p>Te digo lo que necesitas escuchar, no lo que quieres oír. Si el precio de tu propiedad está mal, te lo digo. Si hay un riesgo legal, te lo digo. Siempre.</p>
-        </div>
-
-        <div class="dif-card" data-delay="1">
-          <div class="dif-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <h4>Trato directo y personal</h4>
-          <p>Trabajas directamente conmigo en todo momento. Conozco tu situación, escucho tus objetivos y te doy atención real — no respuestas de plantilla.</p>
-        </div>
-
-        <div class="dif-card" data-delay="2">
-          <div class="dif-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <h4>Tecnología en cada proceso</h4>
-          <p>Uso herramientas digitales para cobros, reportes y seguimiento. Tú siempre sabes qué está pasando con tu propiedad, desde donde estés.</p>
-        </div>
-
-        <div class="dif-card" data-delay="3">
-          <div class="dif-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <h4>Contratos que protegen</h4>
-          <p>Documentación legal bien estructurada para cada operación. Tus derechos como propietario siempre quedan blindados, sin excepciones.</p>
-        </div>
-
-        <div class="dif-card" data-delay="4">
-          <div class="dif-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <h4>Red de proveedores confiables</h4>
-          <p>Cuento con técnicos, plomeros, electricistas y personal de limpieza de confianza. Tu propiedad queda en buenas manos, sin que tú tengas que buscar a nadie.</p>
-        </div>
-
-        <div class="dif-card" data-delay="5">
-          <div class="dif-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h4>Respuesta rápida, siempre</h4>
-          <p>Cuando algo ocurre, quieres a alguien que responda de inmediato. Estoy disponible y actúo antes de que un problema pequeño se convierta en uno grande.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       SOBRE MÍ
-  ========================================================= -->
-  <section class="sobre-mi" id="sobre-mi">
-    <div class="container">
-      <div class="sobre-mi__grid">
-
-        <div class="sobre-mi__visual">
-          <div class="sobre-mi__foto-wrap">
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-photo-outer">
+          <div class="hero-photo-inner">
             <img src="Mi Foto.jpg" alt="Angel Barba, asesor inmobiliario en Tijuana" />
           </div>
-          <div class="sobre-mi__redes">
-            <p class="redes-label">Sígueme en redes sociales</p>
-            <div class="redes-grid">
-              <a href="https://instagram.com/angelbarbarealty" target="_blank" rel="noopener" class="red-link" aria-label="Instagram @angelbarbarealty">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Instagram
-              </a>
-              <a href="https://facebook.com/angelbarbarealty" target="_blank" rel="noopener" class="red-link" aria-label="Facebook @angelbarbarealty">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                Facebook
-              </a>
-              <a href="https://tiktok.com/@angelbarbarealty" target="_blank" rel="noopener" class="red-link" aria-label="TikTok @angelbarbarealty">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.77a8.27 8.27 0 004.84 1.55V6.87a4.85 4.85 0 01-1.07-.18z"/></svg>
-                TikTok
-              </a>
-              <a href="https://linkedin.com/in/angelbarbarealty" target="_blank" rel="noopener" class="red-link" aria-label="LinkedIn Angel Barba">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                LinkedIn
-              </a>
-              <a href="https://youtube.com/@angelbarbarealty" target="_blank" rel="noopener" class="red-link" aria-label="YouTube @angelbarbarealty">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-                YouTube
-              </a>
+          <div class="hero-card">
+            <div class="hero-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="hero-card-text">
+              <strong>Tu Asesor de Confianza</strong>
+              <span>Atención directa · Sin intermediarios</span>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="sobre-mi__copy">
-          <span class="chip">Sobre mí</span>
-          <h2 class="section-title">Hola, soy<br /><em>Angel Barba</em></h2>
-          <p>Soy asesor inmobiliario en Tijuana y me dedico a ayudar a propietarios a sacar el máximo provecho de sus inmuebles — ya sea administrando su renta o guiándolos en la venta. Creo que la vivienda es uno de los activos más valiosos que una persona puede tener, y me tomo muy en serio la responsabilidad de cuidarla.</p>
-          <p>Trabajo de manera directa, cercana y honesta. Si algo no conviene, te lo digo. Si hay una mejor alternativa, te la propongo. Mi objetivo no es cerrar una operación — es que tú quedes satisfecho y confíes en mí para lo que sigue.</p>
-          <p>Implemento tecnología y sistemas reales en cada proceso: cobros, contratos, reportes y seguimiento. Cuento con una red de proveedores confiables que cuidan tu propiedad con el mismo estándar con el que cuido mi trabajo.</p>
-          <div class="sobre-mi__valores">
-            <div class="valor-item">
-              <span class="valor-icon" aria-hidden="true">✦</span>
-              Honesto antes que complaciente
-            </div>
-            <div class="valor-item">
-              <span class="valor-icon" aria-hidden="true">✦</span>
-              Cercano y accesible, siempre
-            </div>
-            <div class="valor-item">
-              <span class="valor-icon" aria-hidden="true">✦</span>
-              Comprometido con tu tranquilidad
-            </div>
-          </div>
-          <a href="#estimacion" class="btn btn--primary">Hablemos de tu propiedad</a>
-        </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+    </div>
+  </section>
 
+  <!-- ╔══════════════════════════════════════════╗
+       ║  DECLARACIÓN                             ║
+       ╚══════════════════════════════════════════╝ -->
+  <section class="statement" aria-label="Filosofía">
+    <div class="statement-wrap">
+      <blockquote>
+        <p>"La mayoría de los asesores dicen lo que quieres escuchar. Yo te digo lo que necesitas saber."</p>
+        <footer>— Angel Barba</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  SERVICIOS                               ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <header class="sec-header">
+        <span class="sec-label">Servicios</span>
+        <h2 class="sec-title">Dos especialidades.<br /><em>Un solo estándar.</em></h2>
+      </header>
+
+      <div class="services-grid">
+        <!-- Administración -->
+        <article class="service-card service-card--dark" data-reveal>
+          <div class="service-num">01</div>
+          <h3>Administración<br />de Rentas</h3>
+          <p>Para el propietario que quiere ingresos sin involucrarse en la operación. Me encargo de todo — desde la selección del inquilino hasta el mantenimiento — para que tú recibas tu dinero cada mes sin preocupaciones.</p>
+          <ul class="service-list">
+            <li>Selección rigurosa de inquilinos con verificación</li>
+            <li>Cobro puntual y rendición de cuentas mensual</li>
+            <li>Contratos que protegen al propietario</li>
+            <li>Red de proveedores para mantenimiento</li>
+            <li>Gestión remota — ideal para propietarios en San Diego</li>
+          </ul>
+          <a href="#valuacion" class="service-cta">
+            Consultar disponibilidad
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+
+        <!-- Venta -->
+        <article class="service-card service-card--light" data-reveal data-delay="1">
+          <div class="service-num">02</div>
+          <h3>Venta de<br />Propiedades</h3>
+          <p>Para el propietario que quiere vender bien y vender rápido. Te doy una valuación honesta basada en el mercado real, una estrategia de precio clara y acompañamiento legal completo hasta el cierre.</p>
+          <ul class="service-list">
+            <li>Valuación basada en comparables del mercado real</li>
+            <li>Estrategia de precio para cerrar en el menor tiempo</li>
+            <li>Difusión profesional a compradores calificados</li>
+            <li>Proceso legal transparente, sin sorpresas</li>
+            <li>Cierre seguro y documentado</li>
+          </ul>
+          <a href="#valuacion" class="service-cta service-cta--dark">
+            Solicitar valuación gratuita
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================
-       BLOG / ARTÍCULOS
-  ========================================================= -->
-  <section class="blog" id="blog">
+  <!-- ╔══════════════════════════════════════════╗
+       ║  VALUACIÓN GRATUITA — LEAD MAGNET        ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="valuacion" class="valuation">
     <div class="container">
-      <div class="section-header">
-        <span class="chip">Artículos</span>
-        <h2 class="section-title">Consejos y <em>tendencias</em><br />del mercado inmobiliario</h2>
-        <p class="section-desc">Publico contenido real, útil y sin relleno sobre el mercado de Tijuana. Sin tecnicismos — solo lo que de verdad te sirve como propietario.</p>
-      </div>
-      <div class="blog__grid">
+      <div class="valuation-grid">
+        <div class="valuation-copy" data-reveal>
+          <span class="val-tag">Gratis · Sin compromiso</span>
+          <h2>¿Cuánto vale<br />tu propiedad hoy?</h2>
+          <p>Muchos propietarios toman decisiones con números desactualizados. En menos de 24 horas te doy una valuación basada en el mercado real de Tijuana — para que decidas con información, no con suposiciones.</p>
 
-        <article class="blog-card blog-card--featured">
-          <div class="blog-card__img blog-card__img--1" aria-hidden="true"></div>
-          <div class="blog-card__body">
-            <span class="blog-tag">Administración</span>
-            <h3>5 errores que cometen los propietarios al rentar sin asesoría</h3>
-            <p>Desde escoger inquilinos sin verificación hasta contratos que no protegen al dueño — estos son los errores más comunes y cómo evitarlos.</p>
-            <div class="blog-card__footer">
-              <span class="blog-date">Próximamente</span>
-              <a href="#contacto" class="blog-link">
-                Leer artículo
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
+          <div class="val-benefits">
+            <div class="val-benefit">
+              <span class="val-check" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Respuesta en menos de 24 horas
             </div>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-card__img blog-card__img--2" aria-hidden="true"></div>
-          <div class="blog-card__body">
-            <span class="blog-tag">Venta</span>
-            <h3>¿Cuándo es el mejor momento para vender tu propiedad en Tijuana?</h3>
-            <p>El mercado tiene ciclos. Te explico qué factores considerar para tomar la mejor decisión y no dejar dinero sobre la mesa.</p>
-            <div class="blog-card__footer">
-              <span class="blog-date">Próximamente</span>
-              <a href="#contacto" class="blog-link">
-                Leer artículo
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
+            <div class="val-benefit">
+              <span class="val-check" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Basada en el mercado actual de Tijuana
             </div>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-card__img blog-card__img--3" aria-hidden="true"></div>
-          <div class="blog-card__body">
-            <span class="blog-tag">Mercado</span>
-            <h3>Tijuana 2025: qué está pasando con el mercado de rentas y por qué importa</h3>
-            <p>Una mirada honesta al panorama actual de rentas en Tijuana y lo que significa para ti como propietario o como futuro inversionista.</p>
-            <div class="blog-card__footer">
-              <span class="blog-date">Próximamente</span>
-              <a href="#contacto" class="blog-link">
-                Leer artículo
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-      <div class="blog__cta">
-        <p>¿Quieres que te avise cuando publique nuevo contenido?</p>
-        <a href="https://wa.me/526647548143?text=Hola%20Angel%2C%20quiero%20recibir%20tus%20nuevos%20art%C3%ADculos%20sobre%20bienes%20ra%C3%ADces." class="btn btn--primary" target="_blank" rel="noopener">Avisarme por WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       CONTACTO
-  ========================================================= -->
-  <section class="contacto" id="contacto">
-    <div class="container">
-      <div class="contacto__grid">
-
-        <div class="contacto__copy">
-          <span class="chip chip--light">Contacto</span>
-          <h2 class="section-title section-title--light">¿Tienes una<br /><em>propiedad?</em><br />Hablemos.</h2>
-          <p class="section-desc section-desc--light">Una conversación de 10 minutos puede darte más claridad que meses de duda. Sin presión, sin compromiso — solo una plática honesta.</p>
-          <div class="contacto__datos">
-            <a href="https://wa.me/526647548143" class="dato-item" target="_blank" rel="noopener">
-              <div class="dato-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </div>
-              <div>
-                <span>WhatsApp</span>
-                <strong>+52 664 754 8143</strong>
-              </div>
-            </a>
-            <a href="mailto:circuloinmobiliariotijuana.@gmail.com" class="dato-item">
-              <div class="dato-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <span>Correo electrónico</span>
-                <strong>circuloinmobiliariotijuana.@gmail.com</strong>
-              </div>
-            </a>
-            <div class="dato-item">
-              <div class="dato-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <span>Zona de operación</span>
-                <strong>Tijuana, Baja California</strong>
-              </div>
+            <div class="val-benefit">
+              <span class="val-check" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Sin ningún compromiso de contratación
             </div>
           </div>
         </div>
 
-        <form class="contacto__form" id="contactForm" novalidate>
-          <h3>Envíame un mensaje</h3>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="c-nombre">Nombre</label>
-              <input type="text" id="c-nombre" name="nombre" placeholder="Tu nombre" required />
+        <form class="valuation-form" id="valuationForm" novalidate data-reveal data-delay="1">
+          <div class="vf-field">
+            <label for="v-nombre">Nombre completo</label>
+            <input type="text" id="v-nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+          </div>
+          <div class="vf-row">
+            <div class="vf-field">
+              <label for="v-whatsapp">WhatsApp</label>
+              <input type="tel" id="v-whatsapp" name="whatsapp" placeholder="+52 664 000 0000" autocomplete="tel" required />
             </div>
-            <div class="form-field">
-              <label for="c-telefono">WhatsApp</label>
-              <input type="tel" id="c-telefono" name="telefono" placeholder="+52 664 000 0000" />
+            <div class="vf-field">
+              <label for="v-tipo">¿Qué necesitas?</label>
+              <select id="v-tipo" name="tipo" required>
+                <option value="" disabled selected>Selecciona</option>
+                <option value="renta">Precio de renta</option>
+                <option value="venta">Precio de venta</option>
+                <option value="ambos">Ambos</option>
+              </select>
             </div>
           </div>
-          <div class="form-field">
-            <label for="c-interes">¿En qué puedo ayudarte?</label>
-            <select id="c-interes" name="interes" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="administracion">Administrar mi propiedad en renta</option>
-              <option value="venta">Vender mi propiedad</option>
-              <option value="estimacion">Estimación de precio gratis</option>
-              <option value="otro">Otro</option>
-            </select>
+          <div class="vf-field">
+            <label for="v-detalle">Cuéntame sobre tu propiedad</label>
+            <textarea id="v-detalle" name="detalle" rows="3" placeholder="Colonia, tipo de inmueble, número de recámaras, metros aproximados…"></textarea>
           </div>
-          <div class="form-field">
-            <label for="c-mensaje">Cuéntame más (opcional)</label>
-            <textarea id="c-mensaje" name="mensaje" rows="4" placeholder="¿Dónde está tu propiedad? ¿Qué necesitas resolver?"></textarea>
-          </div>
-          <button type="submit" class="btn btn--lima btn--full">
-            Enviar por WhatsApp
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <button type="submit" class="btn-primary btn-full">
+            Quiero mi valuación gratuita
           </button>
-          <p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+          <p class="vf-note">Al enviar, se abre WhatsApp con tu solicitud lista para mí.</p>
         </form>
-
       </div>
     </div>
   </section>
 
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
+  <!-- ╔══════════════════════════════════════════╗
+       ║  PROCESO                                 ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="proceso" class="process">
+    <div class="container">
+      <header class="sec-header">
+        <span class="sec-label">Cómo trabajo</span>
+        <h2 class="sec-title">Sin misterio.<br /><em>Así funciona el proceso.</em></h2>
+      </header>
+
+      <div class="process-steps">
+        <div class="process-step" data-reveal>
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h4>Nos conocemos</h4>
+            <p>Me cuentas sobre tu propiedad y tus objetivos. Sin formularios extensos — una conversación de 15 minutos es suficiente para entender qué necesitas.</p>
+          </div>
+        </div>
+        <div class="process-step" data-reveal data-delay="1">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4>Te doy una valuación real</h4>
+            <p>Analizo el mercado actual de Tijuana y te doy un número honesto. No el que quieres escuchar — el que te conviene saber para tomar buenas decisiones.</p>
+          </div>
+        </div>
+        <div class="process-step" data-reveal data-delay="2">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4>Definimos la estrategia</h4>
+            <p>Si decidimos trabajar juntos, establecemos el plan — precio, tiempos, documentación y expectativas claras desde el primer día.</p>
+          </div>
+        </div>
+        <div class="process-step" data-reveal data-delay="3">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4>Yo me encargo del resto</h4>
+            <p>Tú sigues con tu vida. Yo administro, negocio y te reporto. Recibes actualizaciones puntuales — no tienes que estar al pendiente de nada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  POR QUÉ ANGEL                           ║
+       ╚══════════════════════════════════════════╝ -->
+  <section class="why">
+    <div class="container">
+      <header class="sec-header">
+        <span class="sec-label">Por qué elegirme</span>
+        <h2 class="sec-title">Lo que me distingue<br /><em>no es lo que digo.</em></h2>
+        <p class="sec-desc">Es cómo trabajo.</p>
+      </header>
+
+      <div class="why-grid">
+        <div class="why-card" data-reveal>
+          <div class="why-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h4>Honestidad sin excepciones</h4>
+          <p>Si el precio de tu propiedad está mal, te lo digo. Si la operación no conviene, te lo digo. Trabajo a largo plazo — no a base de complacencia.</p>
+        </div>
+        <div class="why-card" data-reveal data-delay="1">
+          <div class="why-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h4>Atención directa, siempre</h4>
+          <p>Trabajas conmigo, no con un asistente. Conozco tu propiedad, conozco tus objetivos y respondo yo directamente — siempre.</p>
+        </div>
+        <div class="why-card" data-reveal data-delay="2">
+          <div class="why-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h4>Sistemas, no promesas</h4>
+          <p>Uso tecnología para cobros, reportes y seguimiento. Tú tienes información actualizada sobre tu propiedad en cualquier momento.</p>
+        </div>
+        <div class="why-card" data-reveal data-delay="3">
+          <div class="why-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h4>Contratos que realmente protegen</h4>
+          <p>Documentación legal sólida en cada operación. Tus derechos como propietario quedan establecidos desde el inicio — sin letra chica.</p>
+        </div>
+        <div class="why-card" data-reveal data-delay="4">
+          <div class="why-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Respuesta inmediata</h4>
+          <p>Cuando algo sucede con tu propiedad, actúo de inmediato. Los problemas pequeños no se vuelven grandes cuando alguien está al pendiente.</p>
+        </div>
+        <div class="why-card" data-reveal data-delay="5">
+          <div class="why-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h4>Red de proveedores confiable</h4>
+          <p>Técnicos, plomeros, electricistas y personal de limpieza verificados. Tu propiedad queda en buenas manos sin que tengas que buscar a nadie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  SOBRE MÍ                                ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="sobre-mi" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-col" data-reveal>
+          <div class="about-photo-wrap">
+            <img src="Mi Foto.jpg" alt="Angel Barba, asesor inmobiliario en Tijuana" />
+          </div>
+          <div class="about-social">
+            <p>@angelbarbarealty</p>
+            <div class="social-row">
+              <a href="https://instagram.com/angelbarbarealty" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com/angelbarbarealty" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://tiktok.com/@angelbarbarealty" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.77a8.27 8.27 0 004.84 1.55V6.87a4.85 4.85 0 01-1.07-.18z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/angelbarbarealty" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://youtube.com/@angelbarbarealty" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy" data-reveal data-delay="1">
+          <span class="sec-label">Quién soy</span>
+          <h2 class="sec-title">Angel Barba.<br /><em>Asesor inmobiliario<br />en Tijuana.</em></h2>
+          <p>Me dedico a los bienes raíces porque creo que una propiedad bien gestionada cambia la vida de las personas. No soy el tipo de asesor que desaparece después de firmar — soy el que sigue ahí cuando el inquilino no paga, cuando hay que reparar algo, cuando el mercado cambia.</p>
+          <p>Trabajo de manera directa y personal. Cuando contratas con Angel Barba, trabajas con Angel Barba. Sin asistentes, sin cadenas de correos, sin respuestas automáticas.</p>
+          <p>Mi estándar es simple: que termines cada interacción conmigo sintiéndote más seguro sobre tu propiedad, no más confundido.</p>
+
+          <div class="about-values">
+            <div class="about-value">
+              <span aria-hidden="true">—</span>
+              Honesto antes que conveniente
+            </div>
+            <div class="about-value">
+              <span aria-hidden="true">—</span>
+              Directo y accesible, siempre
+            </div>
+            <div class="about-value">
+              <span aria-hidden="true">—</span>
+              Comprometido con el resultado, no solo el proceso
+            </div>
+          </div>
+
+          <a href="#valuacion" class="btn-primary">Hablar sobre mi propiedad</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  BLOG                                    ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <header class="sec-header sec-header--left">
+        <span class="sec-label">Artículos</span>
+        <h2 class="sec-title">Lo que todo propietario<br /><em>debería saber.</em></h2>
+      </header>
+
+      <div class="blog-grid">
+        <article class="blog-card blog-card--featured" data-reveal>
+          <div class="blog-visual blog-visual--1" aria-hidden="true">
+            <span class="blog-cat">Administración</span>
+          </div>
+          <div class="blog-body">
+            <h3>Los 5 errores que cometen los propietarios al rentar sin asesoría — y cómo evitarlos</h3>
+            <p>Desde elegir inquilinos sin verificación hasta contratos que no protegen al dueño. Errores comunes con consecuencias evitables.</p>
+            <span class="blog-soon">Próximamente</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-reveal data-delay="1">
+          <div class="blog-visual blog-visual--2" aria-hidden="true">
+            <span class="blog-cat">Mercado</span>
+          </div>
+          <div class="blog-body">
+            <h3>¿Cuándo es el momento correcto para vender en Tijuana?</h3>
+            <p>El mercado tiene ciclos. Cómo leerlos para tomar la decisión correcta y no dejar dinero sobre la mesa.</p>
+            <span class="blog-soon">Próximamente</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-reveal data-delay="2">
+          <div class="blog-visual blog-visual--3" aria-hidden="true">
+            <span class="blog-cat">Legal</span>
+          </div>
+          <div class="blog-body">
+            <h3>Lo que tu contrato de arrendamiento debe incluir sí o sí</h3>
+            <p>Muchos contratos no protegen al propietario cuando más importa. Esto es lo que no puede faltar en el tuyo.</p>
+            <span class="blog-soon">Próximamente</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="blog-footer" data-reveal>
+        <p>¿Quieres recibir artículos nuevos directamente en WhatsApp?</p>
+        <a href="https://wa.me/526647548143?text=Hola%20Angel%2C%20quiero%20recibir%20tus%20art%C3%ADculos%20sobre%20bienes%20ra%C3%ADces." class="btn-text" target="_blank" rel="noopener">
+          <span>Suscribirme por WhatsApp</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  CTA FINAL                               ║
+       ╚══════════════════════════════════════════╝ -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-inner" data-reveal>
+        <h2>¿Tienes una propiedad<br />que podría trabajar mejor?</h2>
+        <p>Hablemos. Sin presión, sin compromiso — solo una conversación honesta sobre lo que tienes y lo que puedes lograr con ello.</p>
+        <div class="final-cta-actions">
+          <a href="#valuacion" class="btn-primary btn-large">Solicitar valuación gratuita</a>
+          <a href="https://wa.me/526647548143?text=Hola%20Angel%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20mi%20propiedad." class="btn-ghost-dark btn-large" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp directo
+          </a>
+        </div>
+        <p class="final-cta-contact">
+          También puedes escribirme a
+          <a href="mailto:circuloinmobiliariotijuana.@gmail.com">circuloinmobiliariotijuana.@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  FOOTER                                  ║
+       ╚══════════════════════════════════════════╝ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <img src="Logo 1.png" alt="Angel Barba Realty" class="footer__logo" />
-          <p>Asesor inmobiliario en Tijuana.<br />Administración de rentas y venta de propiedades.</p>
-          <p class="footer__tagline">Tu Asesor de Confianza</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo 1.png" alt="Angel Barba" class="footer-logo" />
+          <p>Asesor inmobiliario en Tijuana, BC.<br />Administración de rentas · Venta de propiedades.</p>
+          <p class="footer-tagline">Tu Asesor de Confianza</p>
         </div>
-        <div class="footer__nav">
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
           <strong>Sitio</strong>
           <a href="#servicios">Servicios</a>
-          <a href="#diferencia">Por qué yo</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#sobre-mi">Quién soy</a>
           <a href="#blog">Artículos</a>
-          <a href="#sobre-mi">Sobre mí</a>
-          <a href="#contacto">Contacto</a>
-        </div>
-        <div class="footer__nav">
-          <strong>Servicios</strong>
-          <a href="#servicios">Administración de rentas</a>
-          <a href="#servicios">Venta de propiedades</a>
-          <a href="#estimacion">Estimación de precio gratis</a>
-        </div>
-        <div class="footer__nav">
+          <a href="#valuacion">Valuación gratuita</a>
+        </nav>
+        <nav class="footer-nav" aria-label="Redes sociales">
           <strong>Redes sociales</strong>
-          <a href="https://instagram.com/angelbarbarealty" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://facebook.com/angelbarbarealty" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://tiktok.com/@angelbarbarealty" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://instagram.com/angelbarbarealty"  target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/angelbarbarealty"   target="_blank" rel="noopener">Facebook</a>
+          <a href="https://tiktok.com/@angelbarbarealty"    target="_blank" rel="noopener">TikTok</a>
           <a href="https://linkedin.com/in/angelbarbarealty" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://youtube.com/@angelbarbarealty" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://youtube.com/@angelbarbarealty"   target="_blank" rel="noopener">YouTube</a>
+        </nav>
+        <div class="footer-contact">
+          <strong>Contacto</strong>
+          <a href="https://wa.me/526647548143" target="_blank" rel="noopener">+52 664 754 8143</a>
+          <a href="mailto:circuloinmobiliariotijuana.@gmail.com">circuloinmobiliariotijuana.@gmail.com</a>
+          <span>Tijuana, Baja California</span>
         </div>
       </div>
-      <div class="footer__bottom">
-        <span>© 2025 Angel Barba — Asesor Inmobiliario. Tijuana, BC.</span>
+      <div class="footer-bottom">
+        <span>© 2025 Angel Barba — Asesor Inmobiliario</span>
         <span>Círculo Inmobiliario Tijuana</span>
       </div>
     </div>
