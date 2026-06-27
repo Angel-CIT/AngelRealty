@@ -49,7 +49,7 @@ document.getElementById('contactForm').addEventListener('submit', e => {
   if (telefono) text += ` Mi teléfono es ${telefono}.`;
   if (mensaje) text += ` ${mensaje}`;
 
-  const phone = '526641234567';
+  const phone = '526647548143';
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
 });
 
