@@ -1281,6 +1281,55 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 /* ================================================================
+   BARRA FLOTANTE REDES SOCIALES
+   ================================================================ */
+.social-float {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.social-float a {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(7,30,35,.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.5);
+  transition: background .2s, color .2s, border-color .2s, transform .2s;
+}
+.social-float a:hover {
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+  transform: translateX(-3px);
+}
+.social-float .sf-wa {
+  background: rgba(37,211,102,.15);
+  color: #25d366;
+  border-color: rgba(37,211,102,.3);
+}
+.social-float .sf-wa:hover {
+  background: #25d366;
+  color: var(--white);
+  border-color: #25d366;
+}
+
+@media (max-width: 860px) {
+  .social-float { display: none; }
+}
+
+/* ================================================================
    ANIMACIONES DE ENTRADA
    ================================================================ */
 [data-reveal] {
