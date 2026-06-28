@@ -639,7 +639,7 @@ button { cursor: pointer; font-family: inherit; }
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--s-4);
 }
 
@@ -703,6 +703,28 @@ button { cursor: pointer; font-family: inherit; }
 }
 .service-card--dark .service-list li { color: rgba(255,255,255,.6); }
 .service-card--dark .service-list li::before { background: var(--lima); opacity: .8; }
+
+.service-card--teal {
+  background: var(--teal);
+  border: 1px solid rgba(255,255,255,.12);
+}
+.service-card--teal .service-num { color: rgba(255,255,255,.05); }
+.service-card--teal h3 {
+  font-family: var(--font-display);
+  font-size: clamp(var(--t-2xl), 2.8vw, var(--t-4xl));
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--white);
+}
+.service-card--teal p {
+  font-size: var(--t-base);
+  line-height: 1.8;
+  color: rgba(255,255,255,.6);
+  max-width: 50ch;
+}
+.service-card--teal .service-list li { color: rgba(255,255,255,.65); }
+.service-card--teal .service-list li::before { background: var(--lima); opacity: .9; }
 
 .service-card--light {
   background: var(--surface);
@@ -1251,6 +1273,10 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--white);
   margin-bottom: var(--s-4);
 }
+.final-cta-inner h2 em {
+  font-style: normal;
+  color: var(--lima);
+}
 .final-cta-inner p {
   font-size: var(--t-md);
   line-height: 1.8;
@@ -1420,6 +1446,8 @@ button { cursor: pointer; font-family: inherit; }
 
   .hero-content { grid-template-columns: 1fr 340px; gap: var(--s-7); }
   .hero-proof   { flex-wrap: wrap; gap: var(--s-3) var(--s-5); }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid .service-card:last-child { grid-column: 1 / -1; }
 
   .valuation-grid { grid-template-columns: 1fr; gap: var(--s-8); }
   .valuation-copy h2 { font-size: clamp(var(--t-3xl), 5vw, var(--t-4xl)); }
@@ -1445,7 +1473,7 @@ button { cursor: pointer; font-family: inherit; }
   .hero-actions { flex-wrap: wrap; }
 
   .services-grid { grid-template-columns: 1fr; }
-  .service-card  { padding: var(--s-7) var(--s-6); }
+  .service-card  { padding: var(--s-6) var(--s-5); }
 
   .process-steps { grid-template-columns: 1fr 1fr; }
   .process-step::after { display: none; }
